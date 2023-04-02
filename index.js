@@ -18,13 +18,13 @@ const logger = winston.createLogger({
     new winston.transports.File({ filename: "expection.log", level: "error" }),
     new winston.transports.File({ filename: "logfile.log", level: "info" }),
     new winston.transports.MongoDB({
-      db: "mongodb://localhost/taskmaster",
+      db: "mongodb://0.0.0.0:27017/taskmaster",
       collection: "loginfo",
       level: "info",
       capped: true,
     }),
     new winston.transports.MongoDB({
-      db: "mongodb://localhost/taskmaster",
+      db: "mongodb://0.0.0.0:27017/taskmaster",
       collection: "logerror",
       level: "error",
       capped: true,
